@@ -9,3 +9,4 @@ Currently, two official plugins are available:
 # learn-react-1
 # student-react-app
 # student-react-app
+# student-react-app

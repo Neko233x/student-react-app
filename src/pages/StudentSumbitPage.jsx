@@ -40,7 +40,7 @@ const StudentSumbitPage = () => {
         onClick={async (e) => {
           console.log({ firstName, lastName });
 
-          await fetch("http://localhost:3000/students", {
+          await fetch(`${import.meta.env.VITE_API_URL}/students`, {
             body: JSON.stringify({
               firstName: firstName,
               lastName: lastName,

@@ -1,12 +1,8 @@
-import React, { useState } from "react";
 import { useForm } from "react-hook-form";
 
-const StudentSumbitPage = () => {
-  const {
-    register,
-    handleSubmit,
-    formState: { errors },
-  } = useForm();
+const SubmitStudentPage = () => {
+  const { register, handleSubmit } = useForm();
+
   const onSubmit = async (data) => {
     await fetch(`${import.meta.env.VITE_API_URL}/students`, {
       body: JSON.stringify({
@@ -15,9 +11,7 @@ const StudentSumbitPage = () => {
         major: data.major,
         school: data.school,
       }),
-      headers: {
-        "content-type": "application/json",
-      },
+      headers: { "content-type": "application/json" },
       method: "POST",
     });
   };
@@ -31,9 +25,9 @@ const StudentSumbitPage = () => {
       <input type="text" placeholder="Last Name" {...register("lastName")} />
       <input type="text" placeholder="Major" {...register("major")} />
       <input type="text" placeholder="School" {...register("school")} />
-      <button type="button">Submit</button>
+      <button type="submit">Submit</button>
     </form>
   );
 };
 
-export default StudentSumbitPage;
+export default SubmitStudentPage

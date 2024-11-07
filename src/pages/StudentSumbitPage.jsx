@@ -27,30 +27,10 @@ const StudentSumbitPage = () => {
 
   return (
     <form onSubmit={handleSubmit(onSubmit)}>
-      <input
-        type="text"
-        placeholder="First Name"
-        {...register("firstName")}
-        value={firstName}
-      />
-      <input
-        type="text"
-        placeholder="Last Name"
-        {...register("lastName")}
-        value={lastName}
-      />
-      <input
-        type="text"
-        placeholder="Major"
-        {...register("major")}
-        value={major}
-      />
-      <input
-        type="text"
-        placeholder="School"
-        {...register("school")}
-        value={school}
-      />
+      <input type="text" placeholder="First Name" {...register("firstName")} />
+      <input type="text" placeholder="Last Name" {...register("lastName")} />
+      <input type="text" placeholder="Major" {...register("major")} />
+      <input type="text" placeholder="School" {...register("school")} />
       <button type="button">Submit</button>
     </form>
   );
